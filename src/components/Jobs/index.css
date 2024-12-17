@@ -1,0 +1,178 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Jobs Page Layout */
+.jobs {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Container for Left Sidebar and Right Content */
+.job-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 20px; /* Space between left and right sections */
+}
+
+/* Left Sidebar */
+.left-bar {
+    width: 25%;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    
+}
+
+/* Right Section (Job Cards Display) */
+.right {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between job cards */
+    overflow-y: auto;
+}
+
+/* Job Card Alignment */
+.job-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px); /* Add hover effect */
+}
+
+/* Loader */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+/* Search Bar Container */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1f2937; /* Dark gray for the background */
+    border: 2px solid #4f46e5; /* Purple border for a modern look */
+    border-radius: 25px; /* Rounded edges */
+    padding: 10px 20px;
+    width: 100%; /* Full width of parent container */
+    max-width: 400px; /* Maximum width for the search bar */
+    margin: 20px auto; /* Center the search bar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease;
+}
+
+.search-bar-container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Search Icon */
+.search-icon {
+    font-size: 1.2rem;
+    color: #4f46e5; /* Purple icon color */
+}
+
+/* Search Input */
+.search-input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff; /* White text for dark background */
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #9ca3af; /* Light gray for placeholder */
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust search bar */
+    .search-bar-container {
+        max-width: 90%; /* Adjust size for smaller screens */
+        padding: 8px 15px;
+    }
+
+    .search-input {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .search-icon {
+        font-size: 1rem; /* Adjust icon size */
+    }
+
+    /* Responsive container layout */
+    .job-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Adjust left sidebar */
+    .left-bar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Adjust right section */
+    .right {
+        width: 100%;
+    }
+
+    /* Job cards spacing */
+    .job-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar-container {
+        gap: 5px;
+        padding: 6px 10px;
+    }
+
+    .search-input {
+        font-size: 0.8rem;
+    }
+
+    .search-icon {
+        font-size: 0.8rem;
+    }
+
+    /* Adjust card styles */
+    .job-card {
+        padding: 10px;
+    }
+}
+/* Remove underline for Link elements */
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from the parent */
+  }
+  
+  /* Optional: Add hover effect if needed */
+  a:hover {
+    color: #4f46e5; /* Example hover color */
+    text-decoration: none;
+  }
+  

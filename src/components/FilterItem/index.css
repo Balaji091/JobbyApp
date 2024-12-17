@@ -1,0 +1,59 @@
+/* General Reset */
+body, h3, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.filter-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading Styling */
+.filter-heading {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #f8f8f8;
+}
+
+/* List Styling */
+.filter-list {
+    list-style: none;
+}
+
+.filter-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Checkbox Styling */
+input[type='checkbox'] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Labels */
+label {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Employment Section */
+.employment {
+    margin-bottom: 20px;
+}
+
+/* Filter Item Hover Effect */
+.filter-list li:hover {
+    color: #00bfff;
+    transition: 0.3s ease-in-out;
+}

@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #121212; /* Dark background for a professional look */
+    color: #ffffff;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1f2937; /* Dark grey for nav bar background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and text */
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    cursor: pointer;
+    max-width: 100%; /* Ensure the logo scales within its container */
+    object-fit: contain; /* Maintain the aspect ratio */
+}
+
+.nav-text {
+    margin-top: 5px; /* Add spacing between logo and text */
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Menu Styling */
+.menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    gap: 40px; /* Equal spacing between menu items */
+}
+
+.menu-item {
+    text-decoration: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 45px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove underline */
+    color: white;
+}
+
+.menu-item:hover {
+    color: #4f46e5; /* Blue on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Logout Button */
+.logout {
+    background-color: #4f46e5;
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px; /* Adjusted padding for a professional look */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
+
+.logout:hover {
+    background-color: #3730a3;
+    transform: scale(1.05);
+}
+
+/* Menu Icon Styling (for mobile view) */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        display: none; /* Default menu is hidden */
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 80px;
+        background-color: #1f2937; /* Match nav bar background */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .menu-item {
+        width: 100%;
+        text-align: left;
+        padding-left: 66px;
+    }
+
+    .logo {
+        height: 30px; /* Reduce size for mobile screens */
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
